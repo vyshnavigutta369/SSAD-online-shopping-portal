@@ -1,3 +1,0 @@
-def index():
-    Accessories = db(db.wfootwear).select(orderby=db.wfootwear.name)
-    return locals()

@@ -1,9 +1,0 @@
-# -*- coding: utf-8 -*-
-# try something like
-#def index():
- #   form = SQLFORM(db.write_review).process()
-
-def index():
-   form=FORM('Your Review: ',INPUT(_name='Review', requires=IS_NOT_EMPTY))
-   you=form
-   return dict(form = form+you)

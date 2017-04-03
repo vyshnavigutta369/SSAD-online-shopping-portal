@@ -1,3 +1,0 @@
-def index():
-    kclothing = db(db.kclothing).select(orderby=db.kclothing.name)
-    return locals()

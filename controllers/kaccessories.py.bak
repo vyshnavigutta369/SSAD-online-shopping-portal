@@ -1,3 +1,0 @@
-def index():
-    accessories = db(db.kaccessories).select(orderby=db.kaccessories.name)
-    return locals()

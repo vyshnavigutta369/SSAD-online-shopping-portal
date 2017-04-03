@@ -1,6 +1,0 @@
-{{extend 'layout.html'}}
-
-<h4>
-    Review
-</h4>
-{{=form}}

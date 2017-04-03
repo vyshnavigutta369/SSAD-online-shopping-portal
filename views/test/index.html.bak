@@ -1,5 +1,0 @@
-{{extend 'layout.html'}}
-<h2>Your Review </h2>
-{{=form}}
-<h2>Previous Reviews</h2>
-{{=BEAUTIFY(request.vars)}}

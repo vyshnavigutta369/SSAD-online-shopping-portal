@@ -1,3 +1,0 @@
-# -*- coding: utf-8 -*-
-db.define_table('write_review',
-                Field('body','text'))

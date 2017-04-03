@@ -1,0 +1,141 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\title{Yorock}
+\author{Vyshnavigutta , PratyushaMusunuru}
+\date{May 2015}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\title{About the App-Yorock}
+\paragraph{}
+Yorock is an app which enables users to do online shopping by clicking on the caegory he/she desires  which  will redirect him/her to the desired page containing his/her required product(s).He/She will be able to buy the product by adding that particular item to the 'Shopping Cart',a cart which contains all his selected products.
+
+\section{Schema of the table Product}
+\begin{itemize}
+\item name
+\item price
+\item description
+\item image
+\item category
+\item sub
+\item mini
+\end{itemize}
+
+
+\section{Schema of the table Address}
+\begin{itemize}
+\item Phone Number
+\item Address
+\item City
+\item Country
+\end{itemize}
+
+
+\section{Feautures of Yorock}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{home.png}
+\caption{Home page for Yorock}
+\label{fig:Home}
+\paragraph{}
+The homepage of  Yorock contains various categories like electrical gadgets,books etc through which the user will be able to choose a Sub-Category as per his requirements.These Sub-Categories present in the Categories are linked in the menu file present in 'models' through their URL's.These URL's are in turn created by calling different functions in default controller.  
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{6.png}
+\caption{Showing the page used for searching all the products related to the query made by the user }
+\label{fig:Search page}
+\paragraph{}
+The user will be able to view all the products that are related to the query entered by him/her by clicking on the 'Search' button which takes him to the above page.On entering his/her query the user will be abe to see all the products related to the query,on clicking any of them he will be redirected to the page containing the product which he clicked.  
+\end{figure}
+\newpage
+
+
+%\section{}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{2.png}
+\caption{Showing the page containing the required product}
+\label{fig:The product's page}
+\paragraph{}
+This page contains a link called as 'Add to the Cart' which adds the item selected by the user to his/her shopping cart.
+\end{figure}
+\newpage
+%\section{}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{3.png}
+\caption{Showing the 'My Cart' page}
+\label{fig:'My Cart' page}
+\paragraph{}
+The 'My Cart' button present on the topmost right-corner of the page allows the user to view all the items he has selected(added to the cart) along with their prices.
+\end{figure}
+\newpage
+%\section{}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{4.png}
+\caption{Showing the page for buying products in the cart}
+\label{fig:A page to buy things}
+\paragraph{}
+The 'Buy' button  present on the right corner of the page allows the user to confirm his/her shopping by filling the essential things like his/her credit card details etc in the form which is created by using SQLFACTORY attribute.
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{5.png}
+\caption{Showing user's address filling page}
+\label{fig:User's page}
+\paragraph{}
+As soon as you press the 'Submit' button in the 'Buy' page the user will be redirected to the Checkout page where he/she is expected to fill the required shipping details in the table 'address'.
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{8.png}
+\caption{Showing the 'MANAGE' page}
+\label{fig:Manager's page}
+\paragraph{}
+If a user tries to access the app-manager's page then he will be encountering a page as shown above.This is obtained when the user's group id is not matched with the manager's group id which in turn is done by using the membership database,group database and auth settings.
+if the user in the case is infact the manager then the following page is displayed.
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{7.png}
+\caption{Showing the 'MANAGE' page}
+\label{fig:Manager's page}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.125]{8.png}
+\caption{Showing The Retailer's page}
+\label{fig:Retailer's page}
+\paragraph{}
+If the logged-in user is not the retailer then the same thing happens as in the case of manager but if the retailer is the user then the above page is displayed.This also is done by matching retailer's group id with that of the user's id.
+In this page the retailer and the manager will be able to fill in the form  for entering various products by entering the details into the table 'product'.
+\end{figure}
+\newpage
+
+
+
+%\section{Conclusion}
+%``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
