@@ -1,0 +1,6 @@
+def index():
+    Laptops = db(db.laptops).select(orderby=db.laptops.name)
+    return locals()
+def edit_phone():
+    form = crud.update(db.laptops,request.args(0))
+    return dict(form=form)

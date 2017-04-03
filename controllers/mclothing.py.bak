@@ -1,0 +1,3 @@
+def index():
+    Accessories = db(db.mclothing).select(orderby=db.mclothing.name)
+    return locals()

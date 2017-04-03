@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'NoneType' object has no attribute 'append'"
+p3
+sS'layer'
+p4
+S'/home/pratyusha/web2py/applications/yorock/controllers/default.py'
+p5
+sS'code'
+p6
+S"def index():\n    product = db(db.product).select(orderby=db.product.name)\n    return locals()\ndef call():\n    session.forget()\n    return service()\n# an action to see and process a shopping cart\n@auth.requires_login()\ndef cart():\n    items = session.cart_items\n    if not request.vars:\n        session.flash = 'Add something to shopping cart'\n        redirect(URL('index'))\n    return dict(cart=session.cart)\n\ndef cart_callback():\n    if request.vars.action == 'add':\n        session.cart_items.append({'id':request.vars.id ,'qty':request.vars.qyt})\n    return dict(cart=session.cart)\n\ndef biography():\n    biography = db(db.biography).select(orderby=db.biography.name)\n    return locals()    \ndef ac():\n    ac = db(db.ac).select(orderby=db.ac.name)\n    return locals()\ndef fiction():\n    fiction = db(db.fiction).select(orderby=db.fiction.name)\n    return locals()\ndef history():\n    history = db(db.history).select(orderby=db.history.name)\n    return locals()\ndef ipads():\n    ipads = db(db.ipads).select(orderby=db.ipads.name)\n    return locals()\ndef kidaccess():\n    kidaccess = db(db.kidaccess).select(orderby=db.kidaccess.name)\n    return locals()\ndef kidcloth():\n    kidcloth = db(db.kidcloth).select(orderby=db.kidcloth.name)\n    return locals()\ndef kidfoot():\n    kidfoot = db(db.kidfoot).select(orderby=db.kidfoot.name)\n    return locals()\ndef laptops():\n    laptops = db(db.laptops).select(orderby=db.laptops.name)\n    return locals()\ndef maccessories():\n    maccessories = db(db.maccessories).select(orderby=db.maccessories.name)\n    return locals()\ndef mclothing():\n    mclothing = db(db.mclothing).select(orderby=db.mclothing.name)\n    return locals()\ndef mfootwear():\n    mfootwear = db(db.mfootwear).select(orderby=db.mfootwear.name)\n    return locals()\ndef philosophy():\n    philosophy = db(db.philosophy).select(orderby=db.philosophy.name)\n    return locals()\ndef phones():\n    phones = db(db.phones).select(orderby=db.phones.name)\n    return locals()\ndef sciefi():\n    sciefi = db(db.sciefi).select(orderby=db.sciefi.name)\n    return locals()\ndef tablets():\n    tablets = db(db.tablets).select(orderby=db.tablets.name)\n    return locals()\ndef waccess():\n    waccess = db(db.waccess).select(orderby=db.waccess.name)\n    return locals()\ndef wcloth():\n    wcloth = db(db.wcloth).select(orderby=db.wcloth.name)\n    return locals()\ndef wfoot():\n    wfoot = db(db.wfoot).select(orderby=db.wfoot.name)\n    return locals()\ndef furniture():\n    furniture = db(db.furniture).select(orderby=db.furniture.name)\n    return locals()\ndef tv():\n    tv = db(db.tv).select(orderby=db.tv.name)\n    return locals()\ndef refrigerators():\n    refrigerators = db(db.refrigerators).select(orderby=db.refrigerators.name)\n    return locals()\ndef form():\n\treturn dict()\t\n\ndef user():\n    return dict(form=auth())\n\n\n@cache.action()\ndef download():\n    return response.download(request, db)\n\n\ndef call():\n    return service()\n\nresponse._vars=response._caller(cart_callback)\n"
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/pratyusha/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/pratyusha/web2py/applications/yorock/controllers/default.py", line 102, in <module>\n  File "/home/pratyusha/web2py/gluon/globals.py", line 393, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/pratyusha/web2py/applications/yorock/controllers/default.py", line 18, in cart_callback\n    session.cart_items.append({\'id\':request.vars.id ,\'qty\':request.vars.qyt})\nAttributeError: \'NoneType\' object has no attribute \'append\'\n'
+p11
+s.

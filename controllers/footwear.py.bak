@@ -1,0 +1,3 @@
+def index():
+    footwear = db(db.footwear).select(orderby=db.footwear.name)
+    return locals()

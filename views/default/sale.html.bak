@@ -1,0 +1,5 @@
+{{extend 'layout.html'}}
+<h1>
+    Insert Your Product :)
+</h1>
+{{=form}}

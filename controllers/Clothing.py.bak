@@ -1,0 +1,3 @@
+def index():
+    Clothing = db(db.Clothing).select(orderby=db.Clothing.name)
+    return locals()

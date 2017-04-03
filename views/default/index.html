@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+<h1 >
+     YOROCK
+</h1>
+<h2>Products</h2>
+<form style="text-align:left;">
+      Find:
+      <input name="name" />
+      <input type="submit" />
+</form>
+{{callback=URL('search',vars=dict(id=request.name))}}
+
+
+
+<table style="padding-bottom:20;">
+{{for p in product:}}
+<th>{{=p.name}} - ${{=p.price}}</th>
+<tr >
+    <td> <img src="{{=URL('default','download',args=p.image)}}" height="200px"/> </td>
+    <td>{{=p.description}}</td>
+    <td><span id="{{='item%s'%p.id}}"></span> {{=A('Add to Cart',callback=URL('cart_callback',vars=dict(id=p.id,action='add')),target='item%s'%p.id)}}</td>
+</tr>
+{{pass}}
+</table>

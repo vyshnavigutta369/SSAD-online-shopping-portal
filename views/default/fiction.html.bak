@@ -1,0 +1,13 @@
+{{extend 'layout.html'}}
+<h1>FICTION</h1>
+<table width='1000' row-gap:'30px' >
+{{for p in fiction:}}
+<th>{{=p.name  }} - ${{=p.price}}</th>
+<tr style="column-gap:20px;color:#000104;width:10px;">
+    <td><img src="{{=URL('default','download',args=p.image)}}" height="300px" width="350px"/> </td>
+    <td>Author:{{=p.mini}}</td>
+    <td>{{=p.description}}</td>
+    <td><span id="{{='item%s'%p.id}}"></span> {{=A('Add to Cart',callback=URL('cart_callback',vars=dict(id=p.id,action='add')),target='item%s'%p.id)}}</td>
+</tr>
+{{pass}}
+</table>

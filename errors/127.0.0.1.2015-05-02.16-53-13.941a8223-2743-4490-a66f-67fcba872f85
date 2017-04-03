@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.NameError'> global name 'crud' is not defined"
+p3
+sS'layer'
+p4
+S'/home/pratyusha/web2py/applications/yorock/controllers/phones.py'
+p5
+sS'code'
+p6
+S'def index():\n    phones = db(db.phones).select(orderby=db.phones.name)\n    return locals()\ndef edit_phone():\n    form = crud.update(db.phone,request.args(0))\n    return dict(form=form)\n\nresponse._vars=response._caller(edit_phone)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/pratyusha/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/pratyusha/web2py/applications/yorock/controllers/phones.py", line 8, in <module>\n  File "/home/pratyusha/web2py/gluon/globals.py", line 393, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/pratyusha/web2py/applications/yorock/controllers/phones.py", line 5, in edit_phone\n    form = crud.update(db.phone,request.args(0))\nNameError: global name \'crud\' is not defined\n'
+p11
+s.

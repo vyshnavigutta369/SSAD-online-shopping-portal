@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.NameError'> global name 'form' is not defined"
+p3
+sS'layer'
+p4
+S'/home/pratyusha/web2py/applications/yorock/controllers/test.py'
+p5
+sS'code'
+p6
+S"# -*- coding: utf-8 -*-\n# try something like\n#def index():\n #   form = SQLFORM(db.write_review).process()\n\ndef index():\n   you=FORM('Your Review: ',INPUT(_name='Review', requires=IS_NOT_EMPTY))\n   return dict(form = form+you)\n\nresponse._vars=response._caller(index)\n"
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/pratyusha/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/pratyusha/web2py/applications/yorock/controllers/test.py", line 10, in <module>\n  File "/home/pratyusha/web2py/gluon/globals.py", line 393, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/pratyusha/web2py/applications/yorock/controllers/test.py", line 8, in index\n    return dict(form = form+you)\nNameError: global name \'form\' is not defined\n'
+p11
+s.

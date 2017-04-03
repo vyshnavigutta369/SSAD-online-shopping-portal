@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'DAL' object has no attribute 'products'"
+p3
+sS'layer'
+p4
+S'/home/pratyusha/web2py/applications/yorock/controllers/default.py'
+p5
+sS'code'
+p6
+S'def index():\n    products = db(db.products).select(orderby=db.products.name)\n    return locals()\n    \n\n\ndef form():\n\treturn dict()\t\n\ndef user():\n    return dict(form=auth())\n\n\n@cache.action()\ndef download():\n    return response.download(request, db)\n\n\ndef call():\n    return service()\n\nresponse._vars=response._caller(index)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/pratyusha/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/pratyusha/web2py/applications/yorock/controllers/default.py", line 22, in <module>\n  File "/home/pratyusha/web2py/gluon/globals.py", line 393, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/pratyusha/web2py/applications/yorock/controllers/default.py", line 2, in index\n    products = db(db.products).select(orderby=db.products.name)\n  File "/home/pratyusha/web2py/gluon/packages/dal/pydal/base.py", line 929, in __getattr__\n    return ogetattr(self, key)\nAttributeError: \'DAL\' object has no attribute \'products\'\n'
+p11
+s.

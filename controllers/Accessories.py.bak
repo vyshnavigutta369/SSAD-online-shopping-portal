@@ -1,0 +1,3 @@
+def index():
+    wAccessories = db(db.wAccessories).select(orderby=db.wAccessories.name)
+    return locals()

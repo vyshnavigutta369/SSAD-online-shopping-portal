@@ -1,0 +1,6 @@
+def index():
+    history = db(db.history).select(orderby=db.history.name)
+    return locals()
+def edit_history():
+    form = crud.update(db.history,request.args(0))
+    return dict(form=form)
